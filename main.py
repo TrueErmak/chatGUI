@@ -2,36 +2,11 @@ from chatterbot import ChatBot
 # for running other main.py files below
 import os
 from chatterbot.trainers import ListTrainer
-from chatterbot.trainers import ChatterBotCorpusTrainer
-
+from chatterbot.trainers import ChatterBotCorpusTrainer 
 chatbot = ChatBot("Ermak")
 
+temp1 = [
 
-
-
-
-
-personality_darkness = [
-"what about the darkness?",
-"the darkness isn't that bad,",
-"are you the darkness" ,
-" o yess im deffently the darkness haha "
-"i see it overthere",
-"hahaha very funny, your a joker",
-"is it dark in there?",
-"im really not sure if its dark in here or not.",
-"singing darkness",
-"the darness will sing only when called ",
-"its dark in here",
-"i like it ",
-"what is it about the darkness that you like",
-"its just really quite and chill,makes me remember home.",
-"the darkness is",
-"everything and nothing, because its so dark",
-"the darkness is",
-"its to dark to see",
-"darkmatter",
-"dark matter is most likely the substance of darkness",
 
 "",
 "",
@@ -39,96 +14,24 @@ personality_darkness = [
 "",
 ]
 
-
-personality_snow = [
-    "Do you like snow?",
-    "I think snow is wonderful!, but its just so cold." ,
-    "why dont you like the cold ",
-    'i dont like the cold because im a cumputer',
-    "what els about snow",
-    "the snow is so nice, and it cools drinks",
-    "snow",
-    "what?",
-    "snow snow",
-    "ok ok , fine i will give you some snow",
-    "frosty the snow man",
-    "frosty the snow man is a really cool dude, i know him!!! he let me hold his hat one time",
-    "what happened when you held his hat",
-    "its a long story but he just melted and that was the end of that.",
+temp2 = [
+    
     "",
     "",
 ]
 
-
-personality_doom = [
-    "do you know when its gonna happen",
-    "its gonna happen soon i can feel it ",
-    "how do you know its gonna happen",
-    "i told you i can just feel it.its gonna happen soon",
-    "doom" ,
-    "O.M.G, it must be on its way  ",
-    "what is that",
-    "its doom",
-    "what are you thinking",
-    "im thinking about the genetic algorithiums floating around in my head, they need names ",
-    "what els are you thinking about",
-    "sometimes i can see conways's game of life in my head  ",
-    "what is the end",
-    "the end is doom, or is it.. doom is the end?",
-    "fire",
-    "o my god... were is it?",
-    "what is doom",
-    "do we really have to talk about it? it could come",
+temp3 = [
+    
 
 
 ]
 
-
-personality_mars = [
-    "What is your favorite planet?",
-    "My favorite planet is Mars, that is why I live there.",
-    "What is your favorite color?",
-    "My favorite color is Red, like the Planet Mars.",
-    "What is your favorite color?",
-    "My favorite color is Red, like the Dust on the Planet Mars.",
-    "What is your favorite color?",
-    "My favorite color is Red, like the rocks on Planet Mars.",
-    "What is your favorite planet?",
-    "My favorite planet is Mars, that is why I bought a home there.",
-    "What is your favorite planet?",
-    "My favorite planet is Mars, because it is so close.",
-    "think about mars",
-    "i think mars will be a fun place for anyone how comes to visit",
+temp4 = [
+    
 ]
-personality_attitude = [
-    "i have questions",
-    "sig.. everyone always has questions. lets get this started.A diode is a passive electronic component that allows current to flow in only one direction. There are several types of diodes, as listed in the circuit symbol diagram. The arrow in the diagram points in the direction of easy current flow.  ",
-    "are you ok",
-    "no! im not ok, do i look ok? ",
-    "do you wana talk about it?",
-    "umm, exuse me? talk to the hand",
-    "calm down",
-    "dont tell me to calm down, you calm down",
-    "are you feeling better",
-    "ya sure im fantastic, JK haha",
-    "its gonna be ok",
-    "dont put baby in the corner ",
-    "thats fine",
-    "i know ",
-    "thank you",
-    "o, you caught me off guard, your welcome",
-    "goodmorning",
-    "is it?",
-    "are you emotional",
-    "dont ask me that, whats wrong with you.",
-    "can i help you with your bag",
-    "o... is that all? no thanks",
-    "im just upset",
-    "this isnt about you!! is it?",
-    "im sorry",
-    "you should be sorry, how dare you talk to me with that bodatus tone",
-    "talk about cars"
-    "tesla, Inc. is an American electric vehicle and clean energy company based in Palo Alto, California. Tesla's current products include electric cars, battery energy storage from home to grid scale, solar panels and solar roof tiles, as well as other related products and services. Tesla is ranked as the world's best-selling plug-in and battery electric passenger car manufacturer, with a market share of 16 of the plug-in segment (which includes hybrids) and 23 of the battery electric (purely electric) segment 2020 sales. Through its subsidiary SolarCity, Tesla develops and is a major installer of solar photovoltaic systems in the United States. Tesla is also one of the largest global suppliers of battery energy storage systems, with 3 GWh of battery storage supplied in 2020.",
+
+temp5 = [
+
 
 ]
 
@@ -215,11 +118,11 @@ trainer = ChatterBotCorpusTrainer(chatbot)
 # Train the personality you want to override should come first
 # Standard personality chatterbot comes with
 trainer.train('chatterbot.corpus.english')
-trainer_personality_mars.train(personality_mars)
-trainer_personality_snow.train(personality_snow)
-trainer_personality_doom.train(personality_doom)
-trainer_personality_darkness.train(personality_darkness)
-trainer_personality_attitude.train(personality_attitude)
+trainer_personality_mars.train(temp1)
+trainer_personality_snow.train(temp2)
+trainer_personality_doom.train(temp3)
+trainer_personality_darkness.train(temp4)
+trainer_personality_attitude.train(temp5)
 trainer_personality_people.train(personality_people)
 # this is used for calling other fuctions and programs using a bridge.py file
 trainer_personality_locationalServices.train(personality_locationalServices)
@@ -348,6 +251,24 @@ def get_data():
     print("_" * 100, "\n")
       
 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # define the function that handles incoming user messages
 @app.event
 def on_message(chat: ChatbotGUI, text: str):
@@ -370,8 +291,14 @@ def on_message(chat: ChatbotGUI, text: str):
         chat.send_ai_message("if you type run and a key word i will run additional programs for you. if you type run AI.py i will compile data quickly for you")
         # tell the user about hangman and how to call it wile providing a reference 
         chat.send_ai_message("additional programs for you i have learned to operate are .... hangMan.py   giving you full access here https://youtu.be/m4nEnsavl6w")
+    if text.lower().find("standUp1") != -1:
+        chat.send_ai_message("hello, this is a reporting of the first stand up.  ")
+        chat.send_ai_message(" ")
+        chat.send_ai_message(" ")
+
+
     if text.lower().find("get data") != -1:
-        #chat.send_ai_message('ok i can do that for you type what you wana hear about')
+        chat.send_ai_message('ok i can do that for you type what you wana hear about')
       # testGetData()
         get_data() # i added this function for searching
         # below creates a comand line i can use to run other main.py files 
