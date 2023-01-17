@@ -1,0 +1,48 @@
+# trying to make a pathway or a bridge between files.
+# so i can open programs using my AI
+
+
+
+from subprocess import call
+# making an objet that is myTest
+class callPy(object):
+    #defining the path 
+    # at error ?????????????????????????????????????????????????????????????????????????????????????????????????????????????
+    def __init__(self,path ="C:\Users\ecana\Desktop\python\code_block_python\here\work folder5\myTest.py"):
+        #seting path to self
+        self.path = path
+    # calling self
+    def call_python_file(self):
+        #call python3Complier and format its path
+        # disabled* call(["Python3","{}".format(self.path)])
+        call(["ifconfig  en0"])
+
+if __name__ == "__main__":
+    c=callPy()
+    c.call_python_file()
+
+
+
+NEXT   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+modifyed as this
+
+
+if text.lower().startswith("run"):
+        text = text.lstrip("run")
+        text = text.lstrip()
+
+        os.system("python " + text)
+        # cant use the method below wie running ANOTHER FILE 
+        #chat.send_ai_message("I ran your file '" + text + "' for you!")
+        return
+
+
+
+# this will run other main.py files through the GUI interface
+# next step is to conect additional GUI AI through this code by simply asking the original AI to initaitate programs 
+# proof of concept correct and implmented in function call for data assistant code is get data.
+
+
+
+NEXT XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

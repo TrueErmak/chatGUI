@@ -1,0 +1,24 @@
+
+
+
+****all programs are fed through the GUI so the user can operate them at will**** 
+program list 
+    words.py
+        this is used to select hangMan words
+            run words.py
+                an example 
+    myTest.py
+        you can do something ordinary 
+    hangMan.py
+        its a hangman game!!!
+    AI.py
+        this is a faster way to do find stuff. 
+                                               ************* something else***************
+there is an internal fuction inside main.py that is access a specal way unlike the others 
+ its a slow wayto find things but it also reads it to you slowly. 
+ GUI will be busy durring this prcess.
+
+
+ 
+
+    
