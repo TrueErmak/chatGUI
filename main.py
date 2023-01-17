@@ -1,11 +1,12 @@
 from chatterbot import ChatBot
 # for running other main.py files below
 import os
+from chatterbot.trainers import ListTrainer
+from chatterbot.trainers import ChatterBotCorpusTrainer
 
 chatbot = ChatBot("Ermak")
 
-from chatterbot.trainers import ListTrainer
-from chatterbot.trainers import ChatterBotCorpusTrainer
+
 
 
 
@@ -234,7 +235,7 @@ import pyttsx3
 # create the chatbot app
 app = ChatbotGUI(
     title="H E L L O  mortal  - ermak",
-    gif_path="cortana2.gif",
+    gif_path="computerGIF.gif", # needs a better handler
     show_timestamps=True,
     default_voice_options={
         "rate": 100,
