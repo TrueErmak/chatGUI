@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatbot</title>
+  </head>
+
+  <body>
+    <form onsubmit="submit_message(); return false;">
+      <input type="text" name="msg" id="msg">
+      <input type="submit" value="send">
+    </form>
+    <div id="chat-window"></div>
+    <script>
+      var chat_window = document.getElementById("chat-window");
+      var msg = document.getElementById("msg");
+    
+      function append_message(text, is_bot) {
+        var new_message = document.createElement("div");
+        new_message.innerHTML = text;
+        if (is_bot) {
+          new_message.style.background = "#ddd";
+        }
+        chat_window.appendChild(new_message);
+        chat_window.scrollTop = chat_window.scrollHeight;
+      }
+    
+      function submit_message() {
+        var msg = document.getElementById("msg");
+        append_message(msg.value, false);
+        fetch("/get?msg=" + msg.value)
+          .then(response => response.text())
+          .then(response_text => {
+            append_message(response_text, true);
+          });
+        msg.value = "";
+      }
+    </script>
+    
+  </body>
+  
+</html>
+
+
+
